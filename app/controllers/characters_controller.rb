@@ -13,17 +13,16 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @character = Character.create(character_params)
-
+    @character = Character.new(character_params)
+    @character.house = House.find_by(name: params[:character][:house])
     @character.save
-
-    redirect_to characters_path(@character)
+    redirect_to character_path(@character)
   end
 
 
   private
 
   def character_params
-    params.require(:character).permit(:name, :house_id)
+    params.require(:character).permit(:name, :house_id, :img_url)
   end
 end
