@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ /* assets/stylesheets */
+@font-face {
+  font-family: "thrones";
+  src: url('game_of_thrones.ttf');
+}
+
 body {
   background-color:rgb(0,0,0);
   background-image:url(http://www.zingerbugimages.com/backgrounds/tan_parchment_paper_wallpaper_texture_seamless.jpg);
@@ -23,4 +30,19 @@ body {
 }
 header {
   text-align: center;
+
+}
+.container {
+  margin: auto 0;
+  width: 800px;
+}
+h1 {
+    font-family: 'thrones';
+    font-size: 56px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  width: 100%;
 }
