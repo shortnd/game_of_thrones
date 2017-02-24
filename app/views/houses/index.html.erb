@@ -3,5 +3,6 @@
  <div class="house">
    <h2><%=link_to house.name, house_path(house)%></h2>
    <img src="<%= house.img_url %>"/>
+   <h3>House Sayings</h3> <br/><h4><%= house.words %></h4>
  </div>
 <% end %>

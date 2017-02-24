@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170224153408) do
 
   create_table "characters", force: :cascade do |t|
     t.string  "name"
+    t.string  "img_url"
     t.integer "house_id"
     t.index ["house_id"], name: "index_characters_on_house_id", using: :btree
   end

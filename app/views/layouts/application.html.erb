@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <h1>Game of Thrones</h1>
+    <h2><%= link_to "View Houses", houses_path %> | <%= link_to "View Characters", characters_path %> | <%= link_to "New Character", new_character_path %></h2>
     <%= yield %>
   </body>
 </html>
