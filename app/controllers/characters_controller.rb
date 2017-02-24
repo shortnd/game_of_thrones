@@ -7,6 +7,10 @@ class CharactersController < ApplicationController
     @character = Character.find(params[:id])
   end
 
+  def edit
+    @character = Character.find(params[:id])
+  end
+
   def new
     @character = Character.new
     @house_house = House.all.map{ |house| house.name}
@@ -17,6 +21,18 @@ class CharactersController < ApplicationController
     @character.house = House.find_by(name: params[:character][:house])
     @character.save
     redirect_to character_path(@character)
+  end
+
+  def update
+    @character = Character.find(params[:id])
+    @character.update(character_params)
+    redirect_to character_path(@character)
+  end
+
+  def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    redirect_to characters_path
   end
 
 
